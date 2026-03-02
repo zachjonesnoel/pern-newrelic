@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "start": "env-cmd -f  ./.env.local vite --host",
-    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0"
+    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "start:nr-deploy": "env-cmd -f  ./.env.local vite --host \n newrelic entity deployment create --guid INSERT_YOUR_GUID_HERE --version 1.0.0"
   },
   "dependencies": {
     "axios": "^0.27.2",

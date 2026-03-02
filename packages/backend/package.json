@@ -7,6 +7,7 @@
     "start": "npx env-cmd -f ./.env node server",
     "start:prod": "npx env-cmd -f ./.env node -r newrelic server",
     "start:nr": "npx env-cmd -f ./.env node -r newrelic server",
+    "start:nr-deploy": "npx env-cmd -f ./.env node -r newrelic server \n newrelic entity deployment create --guid INSERT_YOUR_GUID_HERE --version 1.0.0",
     "load": "npx load-generator",
     "initialize": "npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
     "test": "echo \"Error: no test specified\" && exit 1"

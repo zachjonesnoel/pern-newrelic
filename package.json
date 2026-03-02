@@ -12,7 +12,10 @@
     "start:backend": "cd packages/backend && npm start",
     "install:frontend": "cd packages/frontend && npm install",
     "install:backend": "cd packages/backend && npm install",
-    "initialize:db": "cd packages/backend && npm run initialize"
+    "initialize:db": "cd packages/backend && npm run initialize",
+    "start:nr": "concurrently \"npm run start:nr-backend\" \"npm run start:nr-frontend\"",
+    "start:nr-frontend": "cd packages/frontend && npm nr-deploy",
+    "start:nr-backend": "cd packages/backend && npm nr-deploy"
   },
   "keywords": [
     "pern",
