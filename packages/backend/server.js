@@ -42,6 +42,10 @@ app.get("/", (req, res) => {
   res.json({ message: "Welcome to tutorial application." });
 });
 
+// Error injection middleware — reads ERROR_SCENARIO / ERROR_RATE / SLOW_RESPONSE_MS
+const errorSimulator = require("./app/middleware/error-simulator");
+app.use("/api", errorSimulator);
+
 require("./app/routes/tutorial.routes")(app);
 const weather = require("./app/routes/weather.routes");
 app.use("/api/weather",weather);

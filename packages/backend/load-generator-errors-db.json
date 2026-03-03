@@ -1,0 +1,17 @@
+{
+  "pause": 1500,
+  "workers": 6,
+  "timeout": 3000,
+  "urls": [
+    "http://localhost:8080/api/tutorials",
+    "http://localhost:8080/api/tutorials/published",
+    "http://localhost:8080/api/tutorials/difficulty/{difficulty_levels}",
+    "http://localhost:8080/api/tutorials",
+    "http://localhost:8080/api/tutorials/categories",
+    "http://localhost:8080/api/tutorials/difficulty/{difficulty_levels}",
+    "http://localhost:8080/api/tutorials/published"
+  ],
+  "values": {
+    "difficulty_levels": ["beginner", "intermediate", "advanced"]
+  }
+}

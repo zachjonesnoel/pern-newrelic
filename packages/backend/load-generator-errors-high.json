@@ -1,0 +1,20 @@
+{
+  "pause": 1000,
+  "workers": 8,
+  "timeout": 800,
+  "urls": [
+    "http://localhost:8080/api/tutorials",
+    "http://localhost:8080/api/tutorials/{bad_ids}",
+    "http://localhost:8080/api/tutorials/published",
+    "http://localhost:8080/api/tutorials/{bad_ids}",
+    "http://localhost:8080/api/tutorials/categories",
+    "http://localhost:8080/api/tutorials/{bad_ids}",
+    "http://localhost:8080/api/tutorials/difficulty/{difficulty_levels}",
+    "http://localhost:8080/api/{nonexistent}"
+  ],
+  "values": {
+    "bad_ids": ["invalid-uuid-1", "not-a-uuid", "completely-wrong-id", "bad-id-xyz"],
+    "difficulty_levels": ["beginner", "intermediate", "advanced"],
+    "nonexistent": ["nonexistent-route", "does-not-exist", "broken-endpoint"]
+  }
+}
