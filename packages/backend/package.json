@@ -8,7 +8,7 @@
     "start:prod": "npx env-cmd -f ./.env node -r newrelic server",
     "start:nr": "npx env-cmd -f ./.env node -r newrelic server",
     "start:nr-deploy": "npx env-cmd -f ./.env node -r newrelic server \n newrelic entity deployment create --guid INSERT_YOUR_GUID_HERE --version 1.0.0 --changelog ADD_YOUR_CHANGELOG_HERE",
-    "start:scenario-clean": "npx env-cmd -f ./.env -f ./.env.scenario-clean node -r newrelic server ",
+    "start:scenario-clean": "npx env-cmd -f ./.env -f ./.env.scenario-clean node -r newrelic server \n newrelic entity deployment create --guid INSERT_YOUR_GUID_HERE --version 1.0.0",
     "start:scenario-low": "npx env-cmd -f ./.env -f ./.env.scenario-low node -r newrelic server",
     "start:scenario-high": "npx env-cmd -f ./.env -f ./.env.scenario-high node -r newrelic server",
     "start:scenario-db": "npx env-cmd -f ./.env -f ./.env.scenario-db node -r newrelic server",
