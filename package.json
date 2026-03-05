@@ -21,7 +21,7 @@
     "start:scenario-high": "concurrently \"cd packages/backend && npm run start:scenario-high\" \"cd packages/frontend && npm run start:scenario-high\"",
     "start:scenario-db": "concurrently \"cd packages/backend && npm run start:scenario-db\" \"cd packages/frontend && npm run start:scenario-db\"",
     "rollback:from-high": "concurrently \"cd packages/backend && npm run rollback:from-high\" \"cd packages/frontend && npm run rollback:from-high\"",
-    "rollback:from-low": "concurrently \"cd packages/backend && npm run rollback:from-low\" \"cd packages/frontend && npm run rollback:from-low\"",
+    "rollback:from-low": "concurrently \"cd packages/backend && npm run start:nr\" \"cd packages/frontend && npm run rollback:from-low\"",
     "rollback:all": "concurrently \"cd packages/backend && npm run rollback:all\" \"cd packages/frontend && npm run rollback:all\"",
     "load:baseline": "cd packages/backend && npm run load:baseline",
     "load:errors-low": "cd packages/backend && npm run load:errors-low",
